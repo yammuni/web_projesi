@@ -21,21 +21,21 @@ navLink.forEach((link) =>
     navMenu.classList.remove("show-menu");
   })
 );
-/*~~~~~~~~~~~~~~~ CHANGE BACKGROUND HEADER ~~~~~~~~~~~~~~~*/
-const scrollHeader = () => {
-    const header = document.getElementById("header");
+/*~~~~~~~~~~~~~~~ CHANGE BACKGROUND headerm ~~~~~~~~~~~~~~~*/
+const scrollheaderm = () => {
+    const headerm = document.getElementById("headerm");
   
     this.scrollY >= 50
-      ? header.classList.add("bg-header")
-      : header.classList.remove("bg-header");
+      ? headerm.classList.add("bg-headerm")
+      : headerm.classList.remove("bg-headerm");
   };
   
-  window.addEventListener("scroll", scrollHeader);
+  window.addEventListener("scroll", scrollheaderm);
 /*~~~~~~~~~~~~~~~ SCROLL SECTIONS ACTIVE LINK ~~~~~~~~~~~~~~~*/
 const activeLink = () => {
     const section = document.querySelectorAll('section');
     const navLink = document.querySelectorAll(".nav__link");
-    let current = "home";
+    let current = "memleket";
     section.forEach(section => {
         const sectionTop = section.offsetTop;
         if(this.scrollY >= sectionTop -60) {
@@ -90,13 +90,12 @@ const sr = ScrollReveal({
     duration: 2500,
     delay: 400,
 });
-sr.reveal('.home__img');
-sr.reveal(".home__data", { origin : "bottom"});
-sr.reveal(".about__data", { origin : "left"});
-sr.reveal(".about__img", { origin : "right"});
-sr.reveal(".popular__card", {interval: 100});
-sr.reveal(".recently__data", { origin : "left"});
-sr.reveal(".recently__img", { origin : "right"});
-sr.reveal('.newsletter');
+sr.reveal('.memleket__img');
+sr.reveal(".memleket__data", { origin : "bottom"});
+sr.reveal(".mirasimiz__data", { origin : "left"});
+sr.reveal(".mirasimiz__img", { origin : "right"});
+sr.reveal(".more__card", {interval: 100});
+sr.reveal(".fazla__data", { origin : "left"});
+sr.reveal(".fazla__img", { origin : "right"});
+sr.reveal('.kale');
 sr.reveal('.footer')
-
