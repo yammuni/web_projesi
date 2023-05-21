@@ -1,16 +1,17 @@
+/*~~~~~~~~~~~~~~~ GOOGLE FONTS ~~~~~~~~~~~~~~~*/
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Titan+One&display=swap");
 /*~~~~~~~~~~~~~~~ VARIABLES CSS ~~~~~~~~~~~~~~~*/
 :root {
-  --header-style1-height: 3.5rem;
+  --headerm-height: 3.5rem;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --primary-color: hsl(303, 88%, 20%);
+  --primary-color: hsl(359, 100%, 35%);
   --primary-color-alt: hsl(359, 100%, 25%);
-  --title-color: hsl(216, 56%, 32%);
-  --text-color: hsl(206, 74%, 13%);
-  --text-color-light: hsl(186, 9%, 58%);
-  --body-color: hsl(281, 86%, 85%);
-  --container-color: hsl(261, 91%, 46%);
+  --title-color: hsl(19, 16%, 15%);
+  --text-color: hsl(19, 16%, 35%);
+  --text-color-light: hsl(19, 8%, 55%);
+  --body-color: hsl(36, 52%, 87%);
+  --container-color: hsl(19, 100%, 97%);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
@@ -90,15 +91,15 @@ body.dark-theme {
   --body-color: hsl(0, 7%, 8%);
   --container-color: hsl(19, 10%, 5%);
 }
-.dark-theme .bg-header-style1,
+.dark-theme .bg-headerm,
 .dark-theme .nav__menu,
 .dark-theme .scrollup {
   box-shadow: 0 2px 8px hsla(19, 64%, 4%, 0.5);
 }
-.dark-theme .more__card {
+.dark-theme .mirasimiz__card {
   box-shadow: 0 8px 20px hsla(19, 64%, 4%, 0.2);
 }
-.dark-theme .newsletter__container {
+.dark-theme .kale__container {
   background-color: var(--container-color);
 }
 /*~~~~~~~~~~~~~~~ REUSABLE CSS CLASSES ~~~~~~~~~~~~~~~*/
@@ -178,8 +179,8 @@ body.dark-theme {
 .main {
   overflow: hidden;
 }
-/*~~~~~~~~~~~~~~~ header-style1 & NAV ~~~~~~~~~~~~~~~*/
-.header-style1-style1 {
+/*~~~~~~~~~~~~~~~ headerm & NAV ~~~~~~~~~~~~~~~*/
+.headerm {
   position: fixed;
   top: 0;
   left: 0;
@@ -190,7 +191,7 @@ body.dark-theme {
 }
 .nav {
   position: relative;
-  height: var(--header-style1-height);
+  height: var(--headerm-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -202,7 +203,7 @@ body.dark-theme {
 }
 @media screen and (min-width: 1024px) {
   .nav {
-    height: calc(var(--header-style1-height) + 1.5rem);
+    height: calc(var(--headerm-height) + 1.5rem);
   }
 }
 .nav__toggle,
@@ -298,8 +299,8 @@ body.dark-theme {
 .show-menu {
   top: 0;
 }
-/* Change background header-style1 */
-.bg-header-style1 {
+/* Change background headerm */
+.bg-headerm {
   box-shadow: 0 2px 8px hsla(19, 64%, 24%, 0.1);
 }
 /* Active link */
@@ -319,7 +320,7 @@ body.dark-theme {
   .memleket__container,
   .mirasimiz__container,
   .fazla__container,
-  .newsletter__container {
+  .kale__container {
     grid-template-columns: 0.7fr;
     justify-content: center;
   }
@@ -508,15 +509,102 @@ body.dark-theme {
 .fazla__description {
   margin-bottom: 2rem;
 }
-.my-link {
-  color: purple;
-  text-decoration: wavy;
-  font-weight: bold;
+/*~~~~~~~~~~~~~~~ kale ~~~~~~~~~~~~~~~*/
+.kale__container {
+  position: relative;
+  background-color: hsl(19, 24%, 15%);
+  border-radius: 2.5rem;
+  padding: 5rem 1rem 3rem;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 2rem;
 }
-.my-link:hover {
-  color: red;
+@media screen and (min-width: 1024px) {
+  .kale__container {
+    grid-template-columns: 350px 360px;
+    align-items: center;
+    column-gap: 6rem;
+    padding-bottom: 2.5rem 0;
+    border-radius: 4.5rem;
+  }
 }
-
+.kale__img {
+  width: 150px;
+  position: absolute;
+  top: -2rem;
+  left: -4rem;
+}
+@media screen and (min-width: 768px) {
+  .kale__img {
+    width: 250px;
+    position: absolute;
+    top: -4rem;
+    left: -6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .kale__img {
+    position: initial;
+    width: 350px;
+  }
+}
+.kale__data .section__title {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .kale__data .section__title {
+    margin-bottom: 2.5rem;
+  }
+}
+.kale__form {
+  background-color: #fff;
+  padding: 5px 5px 5px 16px;
+  border-radius: 4rem;
+  display: flex;
+  column-gap: 0.5rem;
+}
+@media screen and (max-width: 340px) {
+  .kale__form {
+    flex-direction: column;
+    background: none;
+    row-gap: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .kale__form {
+    padding: 8px 8px 8px 24px;
+  }
+}
+.kale__input,
+.kale__button {
+  font-family: var(--body-font);
+  border: none;
+  outline: none;
+}
+@media screen and (min-width: 1024px) {
+  .kale__button {
+    font-size: var(--font-sm);
+  }
+}
+.kale__input {
+  width: 90%;
+  color: var(--text-color);
+}
+@media screen and (max-width: 340px) {
+  .kale__input {
+    width: initial;
+    padding: 1rem;
+    border-radius: 4rem;
+  }
+}
+.kale__button {
+  cursor: pointer;
+}
+@media screen and (max-width: 340px) {
+  .kale__button {
+    justify-content: center;
+  }
+}
 /*~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~*/
 .footer {
   padding-block: 3rem 2rem;
@@ -543,6 +631,81 @@ body.dark-theme {
 .footer__link,
 .footer__information {
   font-size: var(--font-xm);
+}
+.footer__content,
+.footer__links {
+  display: grid;
+}
+.footer__content {
+  grid-template-columns: repeat(2, max-content);
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 340px) {
+  .footer__content {
+    gap: 1.4rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .footer__content {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__content {
+    grid-template-columns: repeat(4, max-content);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__content {
+    column-gap: 4rem;
+  }
+}
+.footer__title {
+  font-size: var(--font-md);
+  margin-bottom: 1.5rem;
+}
+.footer__links {
+  row-gap: 0.5rem;
+}
+.footer__link {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+.footer__link:hover {
+  color: var(--primary-color);
+}
+@media screen and (min-width: 1024px) {
+  .footer__title,
+  .footer__description,
+  .footer__link,
+  .footer__information {
+    font-size: var(--font-sm);
+  }
+}
+.footer__social {
+  display: flex;
+  column-gap: 1.25rem;
+}
+.footer__social-link {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  transition: color 0.3s, transform 0.3s;
+}
+.footer__social-link:hover {
+  color: var(--primary-color-alt);
+  transform: translateY(-2px);
+}
+@media screen and (min-width: 1024px) {
+  .footer__social-link {
+    font-size: 1.5rem;
+  }
+}
+.footer__copy {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: var(--font-xm);
+  color: var(--text-color-light);
 }
 /*~~~~~~~~~~~~~~~ SCROLL UP ~~~~~~~~~~~~~~~*/
 .scrollup {

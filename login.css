@@ -1,0 +1,18 @@
+:root {
+    --primary-color:rgb(62, 35, 80);
+    --color-white: #fff;
+    --color-black: rgb(46, 38, 24);
+    --border-color: rgb(115, 19, 204);
+  }
+  body {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  label {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-right: auto;
+  }
+  
